@@ -8,6 +8,6 @@ export default function handleResponseFromAPI(promise) {
     .catch((error) => {
     /* eslint-enable */
       console.log('Got a response from the API');
-      return new Error();
+      return error;
     });
 }
