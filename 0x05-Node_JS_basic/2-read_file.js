@@ -3,7 +3,7 @@ const fs = require('fs');
 function countStudents(path) {
   fs.readFile(path, (err, data) => {
     if (err) {
-      throw new Error('Cannot load from database');
+      throw new Error('Cannot load the database');
     }
     const db = data.toString().split('\n');
     db.shift();
