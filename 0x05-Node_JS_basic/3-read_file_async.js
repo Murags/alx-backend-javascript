@@ -3,7 +3,7 @@ const fs = require('fs');
 async function countStudents (path) {
   return new Promise((resolve, reject) => {
     fs.readFile(path, (err, data) => {
-      if (err) { reject(Error('Cannot load from database')); } else {
+      if (err) { reject(Error('Cannot load the database')); } else {
         const db = data.toString().split('\n');
         db.shift();
         const field = {};
@@ -21,7 +21,7 @@ async function countStudents (path) {
             }
           }
         }
-        console.log(`Numbers of students: ${totalStudents}`);
+        console.log(`Number of students: ${totalStudents}`);
         for (const elem in field) {
           const studentField = field[elem];
           console.log(`Number of students in ${elem}: ${studentField.length}. List: ${studentField.join(', ')}`);
