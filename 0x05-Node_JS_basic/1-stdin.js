@@ -8,7 +8,7 @@ console.log('Welcome to Holberton School, what is your name?');
 
 inter.on('line', line => {
   const name = line.toString();
-  console.log(`Your name is ${name}`);
+  console.log(`Your name is: ${name}`);
 });
 
 inter.on('close', () => {
