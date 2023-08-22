@@ -15,7 +15,6 @@ const app = http.createServer((req, res) => {
     const body = ['This is the list of our students'];
     fs.readFile(path, (err, data) => {
       if (err) {
-        body.pop();
         body.push('Cannot load the database');
         res.end(body.join('\n'));
       } else {
