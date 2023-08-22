@@ -2,14 +2,14 @@ const readline = require('readline');
 
 const inter = readline.createInterface({
   input: process.stdin,
-  output: process.stdout
+  output: process.stdout,
 });
 console.log('Welcome to Holberton School, what is your name?');
 
-inter.on('line', line => {
+inter.on('line', (line) => {
   const name = line.toString();
   console.log(`Your name is: ${name}`);
-  process.exit()
+  process.exit();
 });
 
 inter.on('close', () => {
