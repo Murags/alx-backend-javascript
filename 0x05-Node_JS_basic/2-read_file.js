@@ -22,7 +22,7 @@ function countStudents(path) {
         }
       }
     }
-    console.log(`Numbers of students: ${totalStudents}`);
+    console.log(`Number of students: ${totalStudents}`);
     for (const key in field) {
       if (Object.hasOwnProperty.call(field, key)) {
         const studentList = field[key];
