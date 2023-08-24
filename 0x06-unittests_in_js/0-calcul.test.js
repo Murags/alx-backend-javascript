@@ -19,4 +19,20 @@ describe('calculateNumber simple test suite', function() {
       assert.equal(calculateNumber(1.5, 3.7), 6);
     });
   });
+  describe('#Add negative numbers', function() {
+    it('should return -5', function() {
+      assert.equal(calculateNumber(-1.6, -3), -5);
+    });
+    it('should return -6', function() {
+      assert.equal(calculateNumber(-1.6, -3.6), -6);
+    });
+  });
+  describe('#Add positive and negative numbers', function() {
+    it('should return 2', function() {
+      assert.equal(calculateNumber(-1, 3), 2);
+    });
+    it('should return 1', function() {
+      assert.equal(calculateNumber(-1.6, 3), 1);
+    });
+  });
 });
